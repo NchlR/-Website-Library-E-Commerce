@@ -403,4 +403,14 @@ footer {
     .btn__menu {
         display: block;
     }
+
+    #highlights {
+      margin-top: 8vw;
+    }
+}
+
+@media (max-width: 650px) {
+  .header__container {
+    margin-top: 8vw;
+  }
 }
