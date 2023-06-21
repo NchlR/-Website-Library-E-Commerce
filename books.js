@@ -1,6 +1,6 @@
 function renderBooks() {
-  const booksWrapper = document.querySelector('.books');
-  console.log(booksWrapper);
+  const booksWrapper = document.querySelector(".books");
+  booksWrapper.innerHTML =
   `<div class="book">
             <figure class="book__img--wrapper">
               <img class="book__img" src="assets/atomic habits.jpg" alt="">
@@ -18,14 +18,16 @@ function renderBooks() {
             <div class="book__price">
               <span class="book__price--normal">$59.95</span> $14.95
             </div>
-          </div>`
+          </div>`;
 }
 
 setTimeout(() => {
   renderBooks();
 });
 
-
+/* JavaScript loads faster than the DOM element does so 
+we use an event timeout to push everything inside of this 
+function to the end of the event loop */
 
 // FAKE DATA
 function getBooks() {
@@ -33,7 +35,7 @@ function getBooks() {
     {
       id: 1,
       title: "Crack the Coding Interview",
-                url: "assets/crack the coding interview.png",
+      url: "assets/crack the coding interview.png",
       originalPrice: 49.95,
       salePrice: 14.95,
       rating: 4.5,
